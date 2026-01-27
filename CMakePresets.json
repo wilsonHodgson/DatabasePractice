@@ -8,18 +8,32 @@
             "binaryDir": "${sourceDir}/out/build/${presetName}",
             "cacheVariables": {
                 "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_BUILD_PREFIX": "${sourceDir}/out/build/${presetName}",
                 "CMAKE_C_COMPILER": "/usr/bin/clang",
                 "CMAKE_CXX_COMPILER": "/usr/bin/clang++",
                 "CMAKE_BUILD_TYPE": "Debug"
             }
-        }
+        },
+        {
+            "name": "default",
+            "displayName": "Default Config",
+            "description": "Default build using ubuntu on Github",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_BUILD_PREFIX": "${sourceDir}/out/build/${presetName}",
+                "CMAKE_C_COMPILER": "/usr/bin/clang",
+                "CMAKE_CXX_COMPILER": "/usr/bin/clang++",
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+      }
     ],
     "buildPresets": [
         {
             "name": "Project",
             "description": "",
             "displayName": "",
-            "configurePreset": "Clang 20.1.6 x86_64-suse-linux"
+            "configurePreset": "default"
         }
     ]
 }
