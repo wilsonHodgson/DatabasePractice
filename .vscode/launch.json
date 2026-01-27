@@ -14,7 +14,8 @@
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
-            "stopOnEntry": false
+            "stopOnEntry": false,
+            "preLaunchTask": "CMake: build" //forces cmake to build before launching the executable
         } 
     ]
 }

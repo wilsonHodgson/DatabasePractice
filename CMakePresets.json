@@ -13,5 +13,13 @@
                 "CMAKE_BUILD_TYPE": "Debug"
             }
         }
+    ],
+    "buildPresets": [
+        {
+            "name": "Project",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "Clang 20.1.6 x86_64-suse-linux"
+        }
     ]
 }
