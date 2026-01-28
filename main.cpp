@@ -1,3 +1,4 @@
+#include <cstdlib>
 #include <iostream>
 #include <iterator>
 #include <sqlite3.h>
@@ -14,6 +15,16 @@ static void main (int args[]){
 }
 };
 */
+string get_env_var(string const &key) {
+    char * val;
+    val = getenv(key.c_str());
+    string retval = "";
+    if (val != NULL) {
+        retval = val;
+    }
+
+    return retval;
+}
 
 int main(int, char**){
 
@@ -23,11 +34,12 @@ int main(int, char**){
     int             row = 0;
     int             bytes;
     const unsigned char*          text;
+    string db_path = get_env_var("DB_PATH");
 
     queue[sizeof queue - 1] = '\0';
     snprintf(queue, sizeof queue - 1, "SELECT * FROM country");
 
-    if (sqlite3_open("/home/wilson/Projects/DatabasePractice/sakila_master.db", &db) != SQLITE_OK) {
+    if (sqlite3_open(db_path.c_str(), &db) != SQLITE_OK) {
         cout << "Error opening database.";
         return 2;
     };
