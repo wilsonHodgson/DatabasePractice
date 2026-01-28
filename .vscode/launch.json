@@ -13,6 +13,7 @@
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
+            "env": {"DB_PATH": "${workspaceFolder}/sakila_master.db"},
             "externalConsole": false,
             "stopOnEntry": false,
             "preLaunchTask": "CMake: build" //forces cmake to build before launching the executable
