@@ -11,6 +11,7 @@ on:
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
   BUILD_TYPE: Release
+  DB_PATH: "${{github.workspace}}/sakila_master.db"
 
 jobs:
   build:
@@ -21,6 +22,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Set env
+      run: echo "GITHUB_SHA_SHORT=$(echo $GITHUB_SHA | cut -c 1-6)" >> $GITHUB_ENV
 
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
@@ -35,5 +38,4 @@ jobs:
       working-directory: ${{github.workspace}}/out/build/default
       # Execute tests defined by the CMake configuration.
       # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
-      run: ${{github.workspace}}/out/build/default/DatabasePractice
-
+      run: ctest -C ${{env.BUILD_TYPE}}
