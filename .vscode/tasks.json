@@ -12,6 +12,13 @@
 			"group": "build",
 			"problemMatcher": [],
 			"detail": "CMake template build task"
+		},
+		{
+			"type": "cmake",
+			"label": "CMake: test",
+			"command": "test",
+			"targets": ["all"],
+			"group": "test"
 		}
 	]
 }

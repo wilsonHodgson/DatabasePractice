@@ -11,7 +11,7 @@ on:
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
   BUILD_TYPE: Release
-  DB_PATH: "${{github.workspace}}/sakila_master.db"
+  #DB_PATH: "${{github.workspace}}/sakila_master.db"
 
 jobs:
   build:
