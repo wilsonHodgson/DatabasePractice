@@ -41,7 +41,7 @@
             "name": "Project Test",
             "description": "",
             "displayName": "",
-            "configurePreset": "Clang 20.1.6 x86_64-suse-linux",
+            "configurePreset": "default",
             "environment": {
                     "DB_PATH": "${sourceDir}/sakila_master.db"
             }
