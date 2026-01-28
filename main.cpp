@@ -1,20 +1,11 @@
 #include <cstdlib>
 #include <iostream>
-#include <iterator>
 #include <sqlite3.h>
 #include <string.h>
 #include <string>
 
 using namespace std;
 
-/*
-class Main{
-
-static void main (int args[]){
-
-}
-};
-*/
 string get_env_var(string const &key) {
     char * val;
     val = getenv(key.c_str());
@@ -69,7 +60,7 @@ int main(int, char**){
         }
 
     }
-   // sqlite3_exec(db, "SELECT ALL FROM country;");
+    
     sqlite3_finalize(stmt);
     sqlite3_close(db);
 }

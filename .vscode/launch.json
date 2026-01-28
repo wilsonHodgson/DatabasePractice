@@ -10,11 +10,8 @@
             "request": "launch",
             "program": "${workspaceFolder}/out/build/Clang 20.1.6 x86_64-suse-linux/DatabasePractice",
             "args": [],
-            "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "environment": [],
             "env": {"DB_PATH": "${workspaceFolder}/sakila_master.db"},
-            "externalConsole": false,
             "stopOnEntry": false,
             "preLaunchTask": "CMake: build" //forces cmake to build before launching the executable
         } 
