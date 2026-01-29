@@ -1,21 +1,10 @@
+#include "helpers.hpp"
+#include <sqlite3.h>
 #include <cstdlib>
 #include <iostream>
-#include <sqlite3.h>
-#include <string.h>
-#include <string>
 
 using namespace std;
 
-string get_env_var(string const &key) {
-    char * val;
-    val = getenv(key.c_str());
-    string retval = "";
-    if (val != NULL) {
-        retval = val;
-    }
-
-    return retval;
-}
 
 int main(int, char**){
 
